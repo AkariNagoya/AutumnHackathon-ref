@@ -1,5 +1,5 @@
+### ハンバーガーメニューhtml（参考）
 ```bash
-ハンバーガーメニューhtml（参考）
 <header>
   <button class="hamburger" id="hamburger">
     <span></span>
@@ -13,8 +13,10 @@
       <li>自由</li>
     </ul>
   </nav>
+```
 
-ハンバーガーメニューjs（参考）
+### ハンバーガーメニューjs（参考）
+```bash
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
 
@@ -23,8 +25,10 @@ hamburger.addEventListener('click', ()=> {
   hamburger.classList.toggle('isOpen');
   nav.classList.toggle('isOpen');
 });
+```
 
-ハンバーガーメニューcss（参考）
+### ハンバーガーメニューcss（参考）
+```bash
 /* ハンバーガーメニューのcss確認 （レスポンシブのみに使う場合）*/
 * {
   margin: 0;

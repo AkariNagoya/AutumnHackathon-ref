@@ -1,5 +1,5 @@
+### 切り替えタブhtml（参考）
 ```bash
-切り替えタブhtml（参考）
     <div class="tab-container">
       <div class="tab-buttons">
         <button class="tab-button" data-tab="tab1">日本</button>
@@ -22,8 +22,10 @@
         <p>テキスト、画像、リストなど、何でも入れられます。</p>
       </div>
     </div>
+```
 
-切り替えタブJS（参考）
+### 切り替えタブJS（参考）
+```bash
   // 切り替えタブのJS
   const tabButton = document.querySelectorAll('.tab-button');
   const tabContent = document.querySelectorAll('.tab-content');
@@ -42,8 +44,10 @@
       document.getElementById(targetTab).classList.add('active');
     });
   });
+```
 
-切り替えタブcss（参考）
+### 切り替えタブcss（参考）
+```bash
 /* 切り替えタブのcss */
 .tab-container {
   max-width: 800px;
