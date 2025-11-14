@@ -1,16 +1,16 @@
 ### ハンバーガーメニューhtml（参考）
 ```bash
 <header>
-  <button class="hamburger" id="hamburger">
+   <button class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </button>
-  <nav id="nav">
+  <nav class="nav" id="nav">
     <ul>
-      <li>自由</li>
-      <li>自由</li>
-      <li>自由</li>
+      <li class="title">自由</li>
+      <li class="title">自由</li>
+      <li class="title">自由</li>
     </ul>
   </nav>
 ```
