@@ -1,0 +1,91 @@
+<!-- README.mdのコードが正しいか確認するためのhtmlです -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秋ハッカソン試験用</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <!-- ハンバーガーメニュー -->
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav" id="nav">
+    <ul>
+      <li class="title">日本</li>
+      <li class="title">イタリア</li>
+      <li class="title">ドイツ</li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+    <!-- 切り替えタブ -->
+    <section>
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-button" data-tab="tab1">日本</button>
+          <button class="tab-button" data-tab="tab2">イタリア</button>
+          <button class="tab-button" data-tab="tab3">ドイツ</button>
+        </div>
+        <div class="tab-content active" id="tab1">
+          <h2>日本について</h2>
+          <p>これはタブ1の内容です。ここに任意のコンテンツを配置できます。</p>
+          <p>テキスト、画像、リストなど、何でも入れられます。</p>
+        </div>
+        <div class="tab-content" id="tab2">
+          <h2>イタリアについて</h2>
+          <p>これはタブ2の内容です。ここに任意のコンテンツを配置できます。</p>
+          <p>テキスト、画像、リストなど、何でも入れられます。</p>
+        </div>
+        <div class="tab-content" id="tab3">
+          <h2>ドイツについて</h2>
+          <p>これはタブ3の内容です。ここに任意のコンテンツを配置できます。</p>
+          <p>テキスト、画像、リストなど、何でも入れられます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 送信フォーム -->
+    <section>
+      <div></div>
+    </section>
+  </main>
+  <!-- jsが正しいか確認 -->
+  <script>
+  // ハンバーガーメニューのJS
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+  
+  // クリックしたらisOpenクラスが取り外しされる
+  hamburger.addEventListener('click', ()=> {
+    hamburger.classList.toggle('isOpen');
+    nav.classList.toggle('isOpen');
+  });
+
+  // 切り替えタブのJS
+  const tabButton = document.querySelectorAll('.tab-button');
+  const tabContent = document.querySelectorAll('.tab-content');
+
+  tabButton.forEach(button => {
+    button.addEventListener('click', () => {
+      // タブIDを取得
+      const targetTab = button.getAttribute('data-tab');
+
+      // 全てのボタンとコンテンツからactiveを削除
+      tabButton.forEach(btn => btn.classList.remove('active'));
+      tabContent.forEach(content => content.classList.remove('active'));
+
+      // クリックされたボタンと対応するコンテンツにactiveを追加
+      button.classList.add('active');
+      document.getElementById(targetTab).classList.add('active');
+    });
+  });
+  </script>
+</body>
+</html>
