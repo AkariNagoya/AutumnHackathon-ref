@@ -24,7 +24,7 @@
     </div>
 ```
 
-### 切り替えタブJS（参考）
+### 切り替えタブjs（参考）
 ```bash
   // 切り替えタブのJS
   const tabButton = document.querySelectorAll('.tab-button');
